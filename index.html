@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Opening SIUFIT…</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; background:#020617; color:#fff; display:flex; align-items:center; justify-content:center; height:100vh; margin:0}
+    .card{max-width:520px; padding:28px; background:#0F172A; border:1px solid #1E293B; border-radius:20px; text-align:center}
+    .btn{display:block; margin-top:14px; padding:14px 18px; border-radius:999px; text-decoration:none; font-weight:800}
+    .open{background:linear-gradient(135deg,#22D3EE,#3B82F6,#8B5CF6); color:#fff}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Opening SIUFIT…</h2>
+    <p>If nothing happens, tap the button below.</p>
+    <a class="btn open" id="openBtn" href="siufit://home">Open SIUFIT</a>
+  </div>
+
+  <script>
+    // Try to open the app
+    window.location.href = "siufit://home";
+
+    // Optional fallback (later): Play Store link
+    // After 1200ms, if app didn’t open, you can redirect to Play Store.
+    // Replace YOUR_PACKAGE_NAME with your real package when you publish.
+    setTimeout(() => {
+      // Example Play Store URL (update later when you have it)
+      // window.location.href = "https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME";
+    }, 1200);
+  </script>
+</body>
+</html>
